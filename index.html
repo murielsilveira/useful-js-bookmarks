@@ -27,7 +27,25 @@
   <div id="content-wrapper">
     <div class="inner clearfix">
       <section id="main-content">
-        <h3><a id="welcome-to-usefull-js-bookmarks" class="anchor" href="#welcome-to-useful-js-bookmarks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to Useful JS Bookmarks</h3>
+        <p>Drag these links to your bookmark bar</p>
+
+        <h3>Generate DNS prefetch</h3>
+        <p>
+          <a href="javascript:(function(){var jsCode = document.createElement('script');jsCode.setAttribute('src', 'https://cdn.rawgit.com/PaulKinlan/15d13da60c5402e07387/raw/48ff1fb0c4654711dd0717332c5f97baf381576d/prefetchbuilder.js');document.body.appendChild(jsCode);}());">Generate DNS prefetch</a>
+          by <a href="https://twitter.com/Paul_Kinlan">Paul Kinlan</a> (<a href="https://paul.kinlan.me/quick-script-for-prefetch/">source</a>)
+        </p>
+
+        <h3>Toggle Styles</h3>
+        <p>
+          <a href="javascript:(function(){var styles = document.querySelectorAll('link[rel=\'stylesheet\']'); for (var s = 0; s < styles.length; s++) {styles[s].mediax = styles[s].media;if (styles[s].media === 'only x') { styles[s].media = styles[s].mediax; } else if (styles[s].media !== 'print') {styles[s].media = 'only x';}}})();">Toggle Styles</a>
+          by <a href="https://twitter.com/aerotwist">Paul Lewis</a>
+        </p>
+
+        <h3>GitHub diff</h3>
+        <p>
+          <a href="javascript:(function(){if (document.location.host === 'github.com') {var query = document.location.search;if (query === '') {document.location = document.location + '?w=1';} else if (query.indexOf('w=') === -1){document.location = document.location + '&w=1';} else {var index = query.indexOf('w=');var arr = query.substr(index).split('&');arr[0] = 'w=1';var newQuery = query.slice(0,index) + arr.join('&');var newUrl = document.location.origin + document.location.pathname + newQuery;document.location = newUrl;}}})();">GitHub diff</a>
+          by <a href="https://twitter.com/murielsilveira">me</a> (<a href="https://gist.github.com/murielsilveira/d7cbff99a3f2d8706e54">source</a>)
+        </p>
       </section>
 
       <aside id="sidebar">
